@@ -70,15 +70,15 @@ open class ImagePickerController: UIViewController {
   var volume = AVAudioSession.sharedInstance().outputVolume
 
   @objc open weak var delegate: ImagePickerDelegate?
-  open var stack = ImageStack()
-  open var imageLimit = 0
-  open var preferredImageSize: CGSize?
-  open var startOnFrontCamera = false
+  @objc open var stack = ImageStack()
+  @objc open var imageLimit = 0
+  @objc open var preferredImageSize: CGSize?
+  @objc open var startOnFrontCamera = false
   var totalSize: CGSize { return UIScreen.main.bounds.size }
   var initialFrame: CGRect?
   var initialContentOffset: CGPoint?
   var numberOfCells: Int?
-  var statusBarHidden = true
+  @objc open var statusBarHidden = true
 
   fileprivate var isTakingPicture = false
   open var doneButtonTitle: String? {
